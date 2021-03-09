@@ -13,7 +13,7 @@
     <!-- Styles -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="/resources/css/app.css" />
+    <link rel="stylesheet" href="../css/app.css" />
 
 </head>
 
@@ -24,14 +24,14 @@
                 <img src="https://pg.edu.pl/documents/10607/18545618/pg_poziome_logo_kolor-300x212.jpg?t=1383222176436" class="img-fluid img" alt="LogoPG">
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
+        <div class="row section1">
+            <div class="col-sm subsection1">
                 One of three columns
             </div>
-            <div class="col-sm backgorund-color-row">
+            <div class="col-sm ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="collapse navbar-collapse backgorund-color-row" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">STRONA GŁÓWNA</a>
@@ -60,18 +60,18 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-sm">
+            <div class="col-sm subsection2">
                 One of three columns
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
+        <div class="row section2">
+            <div class="col-sm  subsection1">
                 One of three columns
             </div>
-            <div class="col-sm backgorund-color-row">
+            <div class="col-sm ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="collapse navbar-collapse subsection2" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">START</a>
@@ -90,16 +90,21 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-sm">
+            <div class="col-sm subsection2">
                 One of three columns
             </div>
         </div>
-        <div class="row">
+        <div class="row section3">
             <div class="col-sm">
-                One of three columns
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Wybierz miasto</a>
+                    <ul class="dropdown-menu dropdown-menu-end wrapper">
+                        @foreach($data as $item)
+                        <li>{{$item['stationName']}}</li>
+                        @endforeach
+                    </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row section4">
             <div class="col-sm">
                 KONTAKT
             </div>
