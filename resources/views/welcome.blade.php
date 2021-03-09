@@ -96,12 +96,16 @@
         </div>
         <div class="row section3">
             <div class="col-sm">
+                <form action="CheckDataController" method="POST">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Wybierz miasto</a>
                     <ul class="dropdown-menu dropdown-menu-end wrapper">
                         @foreach($data as $item)
-                        <li>{{$item['stationName']}}</li>
+                        <li><a href="" name="idStation"> {{$item['stationName']}}</a></li>
                         @endforeach
                     </ul>
+                    <div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row section4">

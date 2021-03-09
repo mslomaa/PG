@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', [FetchDataController::class, 'getData']);
 
 Route::get('/', 'FetchDataController@getData');
+Route::get('welcome', 'CheckDataController@checkData');
