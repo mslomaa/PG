@@ -26,7 +26,7 @@
         </div>
         <div class="row section1">
             <div class="col-sm subsection1">
-                One of three columns
+                
             </div>
             <div class="col-sm ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -61,12 +61,12 @@
                 </nav>
             </div>
             <div class="col-sm subsection2">
-                One of three columns
+                
             </div>
         </div>
         <div class="row section2">
             <div class="col-sm  subsection1">
-                One of three columns
+                
             </div>
             <div class="col-sm ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -91,7 +91,7 @@
                 </nav>
             </div>
             <div class="col-sm subsection2">
-                One of three columns
+                
             </div>
         </div>
         <div class="row section3">
@@ -100,17 +100,22 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Wybierz miasto</a>
                     <ul class="dropdown-menu dropdown-menu-end wrapper">
                         @foreach($data as $item)
-                        <li><a href="" name="idStation"> {{$item['stationName']}}</a></li>
+                        <li><a href="CheckDataController" name="idStation"> {{$item['stationName']}}</a></li>
                         @endforeach
                     </ul>
                     <div>
+                    @if(isset($dataCheck))
+                    @foreach($dataCheck as $itemCheck)
+                        <p>{{$itemCheck['id']}}</p>
+                    @endforeach
+                    @endif
                     </div>
                 </form>
             </div>
         </div>
         <div class="row section4">
-            <div class="col-sm">
-                KONTAKT
+            <div class="col-sm ">
+                <p class="foot">KONTAKT</p> 
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@ class CheckDataController extends Controller
 {
     public function checkData()
     {
-        $idStation = $_REQUEST['idStation'];
+        $idStation = 52;
        $dataCheck = Http::get('http://api.gios.gov.pl/pjp-api/rest/station/sensors/'.$idStation)->json();
 
        return view('welcome')
